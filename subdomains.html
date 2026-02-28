@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signabroam - Subdomain Hub</title>
+    <title>Subdomains - Signabroam</title>
     <style>
         * {
             margin: 0;
@@ -71,14 +71,50 @@
 
         .content h1 {
             font-size: 16px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: bold;
         }
 
         .content p {
             font-size: 13px;
-            line-height: 1.6;
             margin-bottom: 15px;
+        }
+
+        .subdomain-list {
+            margin: 15px 0;
+        }
+
+        .subdomain-item {
+            background-color: #c0c0c0;
+            border: 1px solid;
+            border-color: #dfdfdf #404040 #404040 #dfdfdf;
+            padding: 8px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .subdomain-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .subdomain-item:active {
+            border-color: #404040 #dfdfdf #dfdfdf #404040;
+        }
+
+        .subdomain-item a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 13px;
+            display: block;
+        }
+
+        .subdomain-item a:visited {
+            color: #800080;
+        }
+
+        .subdomain-item:hover a {
+            text-decoration: underline;
         }
 
         .btn {
@@ -93,6 +129,7 @@
             display: inline-block;
             color: #000;
             transition: all 0.1s;
+            margin-top: 10px;
         }
 
         .btn:hover {
@@ -102,26 +139,12 @@
         .btn:active {
             border-color: #404040 #dfdfdf #dfdfdf #404040;
         }
-
-        a {
-            color: #0066cc;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        a:visited {
-            color: #800080;
-        }
-
-        .content a {
-            color: #0066cc;
-        }
     </style>
 </head>
 <body>
     <div class="window">
         <div class="title-bar">
-            <span class="title-text">Signabroam.ovh</span>
+            <span class="title-text">Subdomains List - Signabroam.ovh</span>
             <div class="close-btns">
                 <div class="btn-small">_</div>
                 <div class="btn-small">□</div>
@@ -129,11 +152,28 @@
             </div>
         </div>
         <div class="content">
-            <h1>Welcome to Signabroam</h1>
-            <p>Signabroam is used primarily for hosting subdomains rather than as a traditional website.</p>
-            <p>For more information about available subdomains, check the <a href="subdomains.html">Subdomains List</a>.</p>
-            <br>
-            <a href="subdomains.html" class="btn">View Subdomains</a>
+            <h1>Available Subdomains</h1>
+            <p>Click on any subdomain to visit:</p>
+            
+            <div class="subdomain-list">
+                <div class="subdomain-item">
+                    <a href="https://signabroam.ovh">🏠 signabroam.ovh (Main Domain)</a>
+                </div>
+                <div class="subdomain-item">
+                    <a href="https://rx.signabroam.ovh">📡 rx.signabroam.ovh</a>
+                </div>
+                <div class="subdomain-item">
+                    <a href="https://dc.signabroam.ovh">🖥️ dc.signabroam.ovh</a>
+                </div>
+                <div class="subdomain-item">
+                    <a href="https://alisdr.signabroam.ovh">📊 alisdr.signabroam.ovh</a>
+                </div>
+                <div class="subdomain-item">
+                    <a href="https://filehost.signabroam.ovh">📁 filehost.signabroam.ovh</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn">← Back to Home</a>
         </div>
     </div>
 </body>
