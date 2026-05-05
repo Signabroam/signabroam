@@ -4,137 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signabroam - Subdomain Hub</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            background-color: #c0c0c0;
-            padding: 20px;
-            color: #000;
-        }
-
-        .window {
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #dfdfdf #808080 #808080 #dfdfdf;
-            box-shadow: 1px 1px 0 #ffffff inset;
-            padding: 0;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .title-bar {
-            background: linear-gradient(to right, #000080, #1084d7);
-            color: #ffffff;
-            padding: 2px 2px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .title-text {
-            font-weight: bold;
-            font-size: 14px;
-            margin-left: 4px;
-        }
-
-        .close-btns {
-            display: flex;
-            gap: 2px;
-        }
-
-        .btn-small {
-            width: 16px;
-            height: 14px;
-            background-color: #c0c0c0;
-            border: 1px solid;
-            border-color: #dfdfdf #404040 #404040 #dfdfdf;
-            font-size: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-small:active {
-            border-color: #404040 #dfdfdf #dfdfdf #404040;
-        }
-
-        .content {
-            padding: 10px;
-        }
-
-        .content h1 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .content p {
-            font-size: 13px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            background-color: #c0c0c0;
-            border: 2px solid;
-            border-color: #dfdfdf #404040 #404040 #dfdfdf;
-            padding: 4px 12px;
-            cursor: pointer;
-            font-family: 'MS Sans Serif', Arial, sans-serif;
-            font-size: 12px;
-            text-decoration: none;
-            display: inline-block;
-            color: #000;
-            transition: all 0.1s;
-        }
-
-        .btn:hover {
-            background-color: #e0e0e0;
-        }
-
-        .btn:active {
-            border-color: #404040 #dfdfdf #dfdfdf #404040;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        a:visited {
-            color: #800080;
-        }
-
-        .content a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="prism.css">
 </head>
 <body>
-    <div class="window">
-        <div class="title-bar">
-            <span class="title-text">Signabroam.ovh</span>
-            <div class="close-btns">
-                <div class="btn-small">_</div>
-                <div class="btn-small">□</div>
-                <div class="btn-small">✕</div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Signabroam</h1>
+            <p class="hero-subtitle">A cutting-edge subdomain hub engineered for performance and crafted for impact. Seamlessly connecting ideas across digital networks with prismatic brilliance.</p>
+            <div>
+                <a href="#services" class="cta-button">Explore Services</a>
+                <a href="#about" class="cta-button secondary">Learn More</a>
             </div>
         </div>
-        <div class="content">
-            <h1>Welcome to Signabroam</h1>
-            <p>Signabroam is used primarily for hosting subdomains rather than as a traditional website.</p>
-            <p>For more information about available subdomains, check the <a href="subdomains.html">Subdomains List</a>.</p>
-            <br>
-            <a href="subdomains.html" class="btn">View Subdomains</a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-header">
+            <h2>About Signabroam</h2>
+            <p style="margin-top: 1rem;">A modern infrastructure designed for distributed hosting and seamless connectivity</p>
         </div>
-    </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Signabroam is primarily used for hosting subdomains rather than as a traditional website. It serves as a sophisticated gateway to a collection of specialized services and applications.</p>
+                <p>Built with modern web standards and advanced caching mechanisms, Signabroam delivers exceptional performance across multiple domains and services.</p>
+                <p>Each subdomain represents a distinct service or application, carefully orchestrated to work in harmony with the broader ecosystem.</p>
+            </div>
+            <div class="particle-container">
+                <div class="particle particle-1" style="top: 20%; left: 15%;"></div>
+                <div class="particle particle-2" style="top: 40%; left: 70%;"></div>
+                <div class="particle particle-3" style="top: 65%; left: 30%;"></div>
+            </div>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <span class="metric-value">9</span>
+                <span class="metric-label">Active Subdomains</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Uptime Committed</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">∞</span>
+                <span class="metric-label">Scalability</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">0ms</span>
+                <span class="metric-label">Latency Goal</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (SUBDOMAINS SHOWCASE) -->
+    <section class="portfolio" id="services">
+        <div class="portfolio-header">
+            <h2>Our Infrastructure</h2>
+            <p style="margin-top: 1rem;">Explore the diverse services powered by Signabroam's network</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">🌐</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Main Domain</h3>
+                    <p class="portfolio-description">The primary gateway to the Signabroam ecosystem</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Gateway</span>
+                        <span class="portfolio-tag">Primary</span>
+                    </div>
+                    <a href="https://signabroam.ovh" target="_blank" class="portfolio-link">Visit Domain</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">📡</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">RX Service</h3>
+                    <p class="portfolio-description">Advanced WebSDR map</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Map</span>
+                        <span class="portfolio-tag">WebSDR</span>
+                        <span class="portfolio-tag">KiwiSDR</span>
+                        <span class="portfolio-tag">OpenWebRX</span>
+                    </div>
+                    <a href="https://rx.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">🖥️</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">DC Service</h3>
+                    <p class="portfolio-description">Web Radio Player</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Radio Player</span>
+                        <span class="portfolio-tag">High choice</span>
+                    </div>
+                    <a href="https://dc.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">📊</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">AliSDR Service</h3>
+                    <p class="portfolio-description">Software-defined radio analytics and monitoring</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">SDR</span>
+                        <span class="portfolio-tag">Analytics</span>
+                    </div>
+                    <a href="https://alisdr.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">⚡</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">OpenWebRX+ WebSDR</h3>
+                    <p class="portfolio-description">Enhanced web-based software-defined radio platform</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">WebSDR</span>
+                        <span class="portfolio-tag">Enhanced</span>
+                    </div>
+                    <a href="https://websdr.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">📡</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">KiwiSDR Autoreload</h3>
+                    <p class="portfolio-description">Automatically reloads KiwiSDR receiver data</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">LiveStream</span>
+                        <span class="portfolio-tag">Autoreload</span>
+                    </div>
+                    <a href="https://autoreload.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">⏰</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">French Universal Time Signal</h3>
+                    <p class="portfolio-description">Real-time universal time synchronization for French networks (Unofficial)</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">FUTS</span>
+                        <span class="portfolio-tag">Time Signal</span>
+                        <span class="portfolio-tag">Experimental</span>
+                    </div>
+                    <a href="https://futs.duckdns.org" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">📚</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Shortwave Radio Wiki</h3>
+                    <p class="portfolio-description">Experimental wiki for shortwave radio enthusiasts</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Radio</span>
+                        <span class="portfolio-tag">Wiki</span>
+                        <span class="portfolio-tag">Experimental</span>
+                    </div>
+                    <a href="https://wiki.signabroam.ovh" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span class="portfolio-image-icon">📡</span>
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Signabroam DX</h3>
+                    <p class="portfolio-description">Signabroam DX is also formerly known as KiwiSDR.fr</p>
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">SDR</span>
+                        <span class="portfolio-tag">DX</span>
+                        <span class="portfolio-tag">Tools</span>
+                    </div>
+                    <a href="https://dx.signabroam.ovh/" target="_blank" class="portfolio-link">Access Service</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION (TECHNOLOGIES) -->
+    <section class="skills" id="technologies">
+        <div class="skills-header">
+            <h2>Core Technologies</h2>
+            <p>Powered by cutting-edge infrastructure and modern web standards</p>
+        </div>
+        <div class="hexagon-grid">
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">⚡</div>
+                    <div class="hexagon-label">High Performance</div>
+                </div>
+            </div>
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">🔒</div>
+                    <div class="hexagon-label">Secure</div>
+                </div>
+            </div>
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">📡</div>
+                    <div class="hexagon-label">Distributed</div>
+                </div>
+            </div>
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">🚀</div>
+                    <div class="hexagon-label">Scalable</div>
+                </div>
+            </div>
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">🌐</div>
+                    <div class="hexagon-label">Global</div>
+                </div>
+            </div>
+            <div class="hexagon-item">
+                <div class="hexagon-content">
+                    <div class="hexagon-icon">⚙️</div>
+                    <div class="hexagon-label">Advanced</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Ready to Explore?</h2>
+            <p class="contact-text">Dive into the Signabroam ecosystem and discover what's possible with our distributed infrastructure.</p>
+            <div class="contact-links">
+                <a href="#services" class="contact-link">📋 Explore Services</a>
+                <a href="https://signabroam.ovh" target="_blank" class="contact-link">🌍 Main Domain</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Signabroam. Powered by Prism Flux technology. All rights reserved.</p>
+    </footer>
 </body>
 </html>
