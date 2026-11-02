@@ -1,0 +1,727 @@
+body[data-theme="six"] {
+    --surface: #05080c;
+    --surface-raised: #0a0e14;
+    --surface-subtle: #070c11;
+    --border: #1a232b;
+    --border-strong: #2c3842;
+    --text: #ebf0f2;
+    --text-soft: #c4cdd1;
+    --text-muted: #949ea4;
+    --accent: #35b6c9;
+    --accent-hover: #63cddc;
+    background: var(--surface);
+    color: var(--text);
+    font-family: "Chivo", "Segoe UI", sans-serif;
+}
+
+body[data-theme="six"]::before {
+    display: none;
+}
+
+body[data-theme="six"] h1,
+body[data-theme="six"] h2,
+body[data-theme="six"] h3,
+body[data-theme="six"] h4,
+body[data-theme="six"] h5,
+body[data-theme="six"] h6,
+body[data-theme="six"] button {
+    font-family: "Chivo Mono", "Cascadia Code", Consolas, monospace;
+    letter-spacing: -0.035em;
+}
+
+body[data-theme="six"] p {
+    color: #aab6bb;
+    line-height: 1.7;
+}
+
+body[data-theme="six"] a {
+    color: var(--accent-hover);
+}
+
+body[data-theme="six"] a:hover {
+    color: #b2edf2;
+}
+
+body:not([data-theme="six"]) .site-header {
+    display: contents;
+}
+
+body:not([data-theme="six"]) .site-brand,
+body:not([data-theme="six"]) .site-nav {
+    display: none;
+}
+
+body[data-theme="six"] .site-header {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.75rem max(1.25rem, calc((100% - 1040px) / 2));
+    border-bottom: 1px solid var(--border);
+    background: #05080c;
+}
+
+body[data-theme="six"] .site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--text);
+    font: 700 0.95rem/1 "Chivo Mono", Consolas, monospace;
+    white-space: nowrap;
+}
+
+body[data-theme="six"] .site-brand-mark {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    object-fit: contain;
+}
+
+body[data-theme="six"] .site-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 3vw, 2rem);
+}
+
+body[data-theme="six"] .site-nav a {
+    color: #aab6bb;
+    font: 0.72rem/1.4 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .site-nav a:hover {
+    color: var(--accent-hover);
+}
+
+.theme-switch {
+    position: fixed;
+    z-index: 30;
+    top: 0.75rem;
+    right: max(1.25rem, calc((100% - 1040px) / 2));
+    min-height: 2.5rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #3a4852;
+    border-radius: 3px;
+    background: #0a0e14;
+    color: #ebf0f2;
+    font: 600 0.7rem/1.2 "Chivo Mono", Consolas, monospace;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.theme-switch:hover {
+    border-color: #35b6c9;
+    background: #101820;
+    color: #63cddc;
+}
+
+.theme-switch:focus-visible {
+    outline: 2px solid #63cddc;
+    outline-offset: 3px;
+}
+
+body[data-theme="six"] .site-header .theme-switch {
+    position: static;
+    flex: 0 0 auto;
+}
+
+body[data-theme="six"] .hero {
+    display: flex;
+    min-height: 26rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem max(1.25rem, calc((100% - 1040px) / 2));
+    border-bottom: 1px solid var(--border);
+    background:
+        linear-gradient(90deg, rgba(5, 8, 12, 0.96) 0%, rgba(5, 8, 12, 0.82) 38%, rgba(5, 8, 12, 0.2) 100%),
+        linear-gradient(0deg, rgba(5, 8, 12, 0.32), rgba(5, 8, 12, 0.08)),
+        url("/assets/icons/logo/banner.jfif") center 55% / cover no-repeat;
+}
+
+body[data-theme="six"] .hero-content {
+    max-width: 720px;
+    text-align: left;
+}
+
+body[data-theme="six"] .hero-content::before {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    content: "Discode Studio";
+    font: 600 0.72rem/1.4 "Chivo Mono", Consolas, monospace;
+    letter-spacing: 0.12em;
+}
+
+body[data-theme="six"] .hero h1 {
+    margin-bottom: 1rem;
+    background: linear-gradient(100deg, #f4f7f8 15%, #35b6c9 85%);
+    background-clip: text;
+    background-size: 100% auto;
+    animation: none;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    -webkit-text-fill-color: transparent;
+}
+
+body[data-theme="six"] .hero-subtitle {
+    max-width: 590px;
+    margin: 0 0 1.5rem;
+    color: #aab6bb;
+    font-size: 1rem;
+}
+
+body[data-theme="six"] .cta-button {
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    background: var(--accent);
+    box-shadow: none;
+    color: #04262b;
+    font: 600 0.75rem/1.2 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .cta-button:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 8px 24px rgba(53, 182, 201, 0.16);
+    color: #04262b;
+}
+
+body[data-theme="six"] .cta-button.secondary {
+    border-color: #2c3842;
+    background: #0a0e14;
+    color: #c4cdd1;
+}
+
+body[data-theme="six"] .cta-button.secondary:hover {
+    border-color: var(--accent);
+    background: #101820;
+    color: var(--accent-hover);
+}
+
+body[data-theme="six"] .about {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 1.5rem 4rem;
+    max-width: none;
+    margin: 0;
+    padding: 3.5rem max(1.25rem, calc((100% - 1040px) / 2));
+    background: var(--accent);
+    color: #04262b;
+}
+
+body[data-theme="six"] .about-header {
+    margin: 0;
+    text-align: left;
+}
+
+body[data-theme="six"] .about-header h2 {
+    margin-bottom: 0.75rem;
+    color: #04262b;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+body[data-theme="six"] .about-header p {
+    margin-top: 0 !important;
+    color: rgba(4, 38, 43, 0.82);
+    font-size: 0.85rem;
+}
+
+body[data-theme="six"] .about-content {
+    display: block;
+    margin: 0;
+}
+
+body[data-theme="six"] .about-text p {
+    margin-bottom: 0.8rem;
+    color: #04262b;
+    font-size: 0.82rem;
+}
+
+body[data-theme="six"] .about-text p:last-child {
+    margin-bottom: 0;
+}
+
+body[data-theme="six"] .particle-container {
+    display: none;
+}
+
+body[data-theme="six"] .metrics-grid {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(4, 38, 43, 0.25);
+}
+
+body[data-theme="six"] .metric-card {
+    padding: 1rem 1rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+}
+
+body[data-theme="six"] .metric-card + .metric-card {
+    border-left: 1px solid rgba(4, 38, 43, 0.25);
+}
+
+body[data-theme="six"] .metric-card::before {
+    display: none;
+}
+
+body[data-theme="six"] .metric-value {
+    margin-bottom: 0.15rem;
+    background: none;
+    color: #04262b;
+    font: 700 1.4rem/1.2 "Chivo Mono", Consolas, monospace;
+    -webkit-text-fill-color: currentColor;
+}
+
+body[data-theme="six"] .metric-label {
+    color: rgba(4, 38, 43, 0.78);
+    font: 0.65rem/1.5 "Chivo Mono", Consolas, monospace;
+    letter-spacing: 0;
+}
+
+body[data-theme="six"] .portfolio {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    max-width: none;
+    margin: 0;
+    padding: 5rem max(1.25rem, calc((100% - 1040px) / 2));
+    background: #05080c;
+}
+
+body[data-theme="six"] .portfolio-backdrops {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+body:not([data-theme="six"]) .portfolio-backdrops {
+    display: none;
+}
+
+body[data-theme="six"] .portfolio-backdrops::after {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(5, 8, 12, 0.72), rgba(5, 8, 12, 0.38) 36%, rgba(5, 8, 12, 0.78)),
+        linear-gradient(90deg, #05080c 0%, rgba(5, 8, 12, 0.82) 5%, transparent 18%, transparent 82%, rgba(5, 8, 12, 0.82) 95%, #05080c 100%);
+    content: "";
+}
+
+body[data-theme="six"] .portfolio-backdrop-track {
+    position: absolute;
+    inset: 0 auto 0 0;
+    display: flex;
+    width: 1200%;
+    height: 100%;
+    animation: portfolio-slideshow 96s linear infinite;
+    will-change: transform;
+}
+
+body[data-theme="six"] .portfolio-backdrop {
+    display: block;
+    flex: 0 0 8.333333%;
+    width: 8.333333%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(1.5px);
+    transform: scale(1.025);
+}
+
+@keyframes portfolio-slideshow {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+body[data-theme="six"] .portfolio-header,
+body[data-theme="six"] .portfolio-grid {
+    position: relative;
+    z-index: 1;
+}
+
+body[data-theme="six"] .portfolio-header {
+    max-width: 1040px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+body[data-theme="six"] .portfolio-header h2,
+body[data-theme="six"] .skills-header h2,
+body[data-theme="six"] .contact h2 {
+    margin-bottom: 0.55rem;
+    color: #f4f7f8;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+body[data-theme="six"] .portfolio-header p {
+    margin-top: 0 !important;
+    font-size: 0.82rem;
+}
+
+body[data-theme="six"] .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+body[data-theme="six"] .portfolio-card {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #1a232b;
+    border-radius: 3px;
+    background: #070c11;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+body[data-theme="six"] .portfolio-card:hover {
+    border-color: #35b6c9;
+    background: #0a0e14;
+    box-shadow: none;
+    transform: none;
+}
+
+body[data-theme="six"] .portfolio-card:first-child {
+    grid-column: 1 / -1;
+    grid-template-columns: 11rem minmax(0, 1fr);
+}
+
+body[data-theme="six"] .portfolio-image {
+    display: grid;
+    width: auto;
+    height: 100%;
+    min-height: 7rem;
+    place-items: center;
+    border-right: 1px solid #1a232b;
+    background:
+        radial-gradient(circle at center, rgba(53, 182, 201, 0.12), transparent 70%),
+        #05080c;
+}
+
+body[data-theme="six"] .portfolio-card:first-child .portfolio-image {
+    min-height: 9rem;
+}
+
+body[data-theme="six"] .portfolio-image::before {
+    display: none;
+}
+
+body[data-theme="six"] .portfolio-image-icon {
+    color: #63cddc;
+    font-size: 2rem;
+    opacity: 0.9;
+    filter: grayscale(0.35);
+}
+
+body[data-theme="six"] .portfolio-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.1rem;
+}
+
+body[data-theme="six"] .portfolio-title {
+    margin-bottom: 0.35rem;
+    color: #f4f7f8;
+    font-size: 0.95rem;
+}
+
+body[data-theme="six"] .portfolio-description {
+    margin-bottom: 0.75rem;
+    color: #aab6bb;
+    font-size: 0.75rem;
+    line-height: 1.55;
+}
+
+body[data-theme="six"] .portfolio-tags {
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+
+body[data-theme="six"] .portfolio-tag {
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #2c3842;
+    border-radius: 2px;
+    background: #101820;
+    color: #aab6bb;
+    font: 0.6rem/1.3 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .portfolio-tag:hover {
+    border-color: #35b6c9;
+    background: #101820;
+    color: #63cddc;
+}
+
+body[data-theme="six"] .portfolio-link {
+    margin-top: auto;
+    color: #63cddc;
+    font: 600 0.7rem/1.4 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .skills {
+    padding: 4rem max(1.25rem, calc((100% - 1040px) / 2));
+    border-top: 1px solid #1a232b;
+    border-bottom: 1px solid #1a232b;
+    background: #070c11;
+}
+
+body[data-theme="six"] .skills-header {
+    max-width: 1040px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+body[data-theme="six"] .skills-header p {
+    font-size: 0.82rem;
+}
+
+body[data-theme="six"] .hexagon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    max-width: 1040px;
+}
+
+body[data-theme="six"] .hexagon-item {
+    min-height: 4rem;
+    aspect-ratio: auto;
+    justify-content: flex-start;
+    border: 1px solid #1a232b;
+    border-radius: 3px;
+    background: #0a0e14;
+    cursor: default;
+    transform: none;
+}
+
+body[data-theme="six"] .hexagon-item::before {
+    display: none;
+}
+
+body[data-theme="six"] .hexagon-item:hover {
+    border-color: #2c3842;
+    box-shadow: none;
+    transform: none;
+}
+
+body[data-theme="six"] .hexagon-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+body[data-theme="six"] .hexagon-icon {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+body[data-theme="six"] .hexagon-label {
+    color: #c4cdd1;
+    font: 0.72rem/1.4 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .contact {
+    padding: 3.5rem max(1.25rem, calc((100% - 1040px) / 2));
+    border-top: 0;
+    background: #05080c;
+}
+
+body[data-theme="six"] .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem 2rem;
+    max-width: 1040px;
+    text-align: left;
+}
+
+body[data-theme="six"] .contact-content h2,
+body[data-theme="six"] .contact-text {
+    grid-column: 1;
+}
+
+body[data-theme="six"] .contact-text {
+    margin: 0;
+    font-size: 0.82rem;
+}
+
+body[data-theme="six"] .contact-links {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-content: stretch;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+body[data-theme="six"] .contact-link {
+    justify-content: center;
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid #2c3842;
+    border-radius: 3px;
+    color: #c4cdd1;
+    font: 0.7rem/1.4 "Chivo Mono", Consolas, monospace;
+}
+
+body[data-theme="six"] .contact-link:hover {
+    border-color: #35b6c9;
+    background: rgba(53, 182, 201, 0.08);
+    color: #63cddc;
+    transform: none;
+}
+
+body[data-theme="six"] footer {
+    padding: 1.1rem 1.25rem;
+    border-top: 1px solid #1a232b;
+    color: #7d878e;
+    font-size: 0.7rem;
+}
+
+body[data-theme="six"] footer p {
+    color: inherit;
+    font-size: inherit;
+}
+
+@media (max-width: 700px) {
+    body[data-theme="six"] .site-header {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    body[data-theme="six"] .site-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        border-top: 1px solid #1a232b;
+    }
+
+    body[data-theme="six"] .hero {
+        min-height: 22rem;
+        padding: 4rem 1.25rem;
+    }
+
+    body[data-theme="six"] .about {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 1.25rem;
+    }
+
+    body[data-theme="six"] .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+    }
+
+    body[data-theme="six"] .metric-card {
+        padding: 0.75rem 0.5rem 0;
+    }
+
+    body[data-theme="six"] .metric-card + .metric-card {
+        border-left: 0;
+    }
+
+    body[data-theme="six"] .metric-card:nth-child(even) {
+        border-left: 1px solid rgba(4, 38, 43, 0.25);
+    }
+
+    body[data-theme="six"] .portfolio {
+        padding: 3rem 1rem;
+    }
+
+    body[data-theme="six"] .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-theme="six"] .portfolio-card:first-child {
+        grid-column: auto;
+        grid-template-columns: 7rem minmax(0, 1fr);
+    }
+
+    body[data-theme="six"] .portfolio-card:first-child .portfolio-image {
+        min-height: 7rem;
+    }
+
+    body[data-theme="six"] .skills {
+        padding: 3rem 1rem;
+    }
+
+    body[data-theme="six"] .hexagon-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body[data-theme="six"] .contact {
+        padding: 2.5rem 1.25rem;
+    }
+
+    body[data-theme="six"] .contact-content {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    body[data-theme="six"] .contact-content h2,
+    body[data-theme="six"] .contact-text,
+    body[data-theme="six"] .contact-links {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    body[data-theme="six"] .site-brand {
+        font-size: 0.8rem;
+    }
+
+    body[data-theme="six"] .site-nav {
+        gap: 0.5rem;
+    }
+
+    body[data-theme="six"] .site-nav a {
+        font-size: 0.65rem;
+    }
+
+    .theme-switch {
+        padding: 0.45rem 0.5rem;
+        font-size: 0.62rem;
+    }
+
+    body[data-theme="six"] .portfolio-card,
+    body[data-theme="six"] .portfolio-card:first-child {
+        grid-template-columns: 5rem minmax(0, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body[data-theme="six"] *,
+    body[data-theme="six"] *::before,
+    body[data-theme="six"] *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    body[data-theme="six"] .portfolio-backdrop-track {
+        animation-duration: 96s !important;
+        animation-iteration-count: infinite !important;
+        animation-timing-function: linear !important;
+    }
+}
